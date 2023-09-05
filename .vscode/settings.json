@@ -2,5 +2,11 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.autopep8"
     },
-    "python.formatting.provider": "none"
+    "python.formatting.provider": "none",
+    "files.associations": {
+        "*.md": "markdown",
+        "*.py": "python",
+        "*.tcc": "cpp",
+        "istream": "cpp"
+    }
 }
