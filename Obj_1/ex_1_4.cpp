@@ -1,6 +1,7 @@
 # include <iostream>
 
-int main(){
+int main()
+{
     // 1
     int sum = 0, v1 = 1;
     while(v1 <= 10){
