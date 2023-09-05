@@ -14,9 +14,15 @@
                 "-g",
                 "${file}",
                 "-o",
+<<<<<<< HEAD
                 "${fileDirname}\\build\\${fileBasenameNoExtension}.exe",
                 "-I",
                 "-std=c++17"
+=======
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-finput-charset=UTF-8",
+                "-fexec-charset=GBK"
+>>>>>>> f40bd1a (第一章结束)
             ],
             "options": {
                 "cwd": "D:\\mingw64\\bin"

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f40bd1a (第一章结束)
 #include <iostream>
 
 int main(){
@@ -27,6 +30,7 @@ int main(){
     "";
 
     return 0;
+<<<<<<< HEAD
 =======
 #include <iostream>
 
@@ -57,4 +61,6 @@ int main(){
 
     return 0;
 >>>>>>> 25d7fbe (第一次在工位上运行成功C++文件, 这个.vscode文件夹是可行的)
+=======
+>>>>>>> f40bd1a (第一章结束)
 }
