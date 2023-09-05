@@ -2,6 +2,7 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.autopep8"
     },
+<<<<<<< HEAD
     "python.formatting.provider": "none",
     "files.associations": {
         "*.md": "markdown",
@@ -46,4 +47,7 @@
         "streambuf": "cpp",
         "typeinfo": "cpp"
     },
+=======
+    "python.formatting.provider": "none"
+>>>>>>> 25d7fbe (第一次在工位上运行成功C++文件, 这个.vscode文件夹是可行的)
 }

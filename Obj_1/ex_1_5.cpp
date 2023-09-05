@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # include <iostream>
 # include <conio.h>
 # include "C:\Users\Litchi\Desktop\C++_Primer_Code\item\Sales_item.h"
@@ -84,3 +85,20 @@ int main()
     2. 不知道为啥如果用while等待输入时, 每次回车都会直接执行程序, 执行结束一个循环之后再次进入while的输入界面, 此时你才可以输入(从调试输入中发现的现象), 如果此时强行输入在终端将看不到你输入的什么, 但是在下一个循环到来之后, 你之前的所有输入会全部出现在终端输入区中, 像是缓存在键盘中一样.
     3. 用conio.h和_getch();在末尾配合终端来解决终端自动退出的问题.
 */
+=======
+# include <iostream>
+# include "C:\Users\Litchi\Desktop\C++_Primer_Code\item\Sales_item.h"
+// 绝对路径, 相对路径不太行, 应该是编辑器某个地方可以添加
+
+int main()
+{
+    // 读写书籍
+    Sales_item book;
+
+    std::cin >> book;
+
+    std::cout << book << std::endl;
+
+    return 0;
+}
+>>>>>>> 25d7fbe (第一次在工位上运行成功C++文件, 这个.vscode文件夹是可行的)
