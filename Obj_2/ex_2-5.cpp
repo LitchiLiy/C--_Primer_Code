@@ -1,7 +1,11 @@
 #include <conio.h>
 #include <iostream>
  
+<<<<<<< HEAD
 int main()
+=======
+int mian()
+>>>>>>> 04d80c1 (第一次将本地文件夹include路径添加, 可以直接从本地文件夹中添加头文件)
 {
     /*
         关于typedef这个东西, 他和常量配合时你需要注意typedef定义结束后的那个类型是一个基本数据类型还是一个符合类型, 然后才和const配
