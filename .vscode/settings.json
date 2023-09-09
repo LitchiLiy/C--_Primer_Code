@@ -46,7 +46,4 @@
         "streambuf": "cpp",
         "typeinfo": "cpp"
     },
-    "C_Cpp.default.includePath": [
-        "${workspaceFolder}/include"
-    ]
 }

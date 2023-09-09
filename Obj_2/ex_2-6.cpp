@@ -1,10 +1,13 @@
 #include <conio.h>
 #include <iostream>
-#include <C:\Users\Litchi\Desktop\C++_Primer_Code\item\Sales_data.h>
+#include <Sales_data.h>
 
-int mian()
+int main()
 {
     // 输入书籍信息
+    int num = 10;
+    char ch = 'a';
+    char ch1[] = "a";
 
     Sales_data book_data1, book_data2;
     std::cout << "输入第一份书籍售卖的信息:书籍单号, 书籍销售数量, 书籍销售单价:" << std::endl;
