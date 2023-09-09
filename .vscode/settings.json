@@ -60,11 +60,11 @@
 >>>>>>> 25d7fbe (第一次在工位上运行成功C++文件, 这个.vscode文件夹是可行的)
 =======
         "istream": "cpp"
-    }
+}
 >>>>>>> f40bd1a (第一章结束)
 =======
     "C_Cpp.default.includePath": [
-        "${workspaceFolder}/include"
-    ]
+    "${workspaceFolder}/include"
+]
 >>>>>>> 04d80c1 (第一次将本地文件夹include路径添加, 可以直接从本地文件夹中添加头文件)
 }
