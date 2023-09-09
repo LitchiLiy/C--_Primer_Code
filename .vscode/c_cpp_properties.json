@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            // # 系统名称
+            "name": "Win32",
+            // # 头文件路径
+            "includePath": [
+                "${workspaceFolder}/include/**",
+                "C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++",
+                "C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"
+            ],
+            // # 添加全局宏定义
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            // # 采用的C标准
+            "cStandard": "gnu17"
+        }
+    ],
+    "version": 4
+}
