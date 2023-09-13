@@ -1,7 +1,7 @@
 #include <conio.h>
 #include <iostream>
  
-int mian()
+int main()
 {
     /*
         关于typedef这个东西, 他和常量配合时你需要注意typedef定义结束后的那个类型是一个基本数据类型还是一个符合类型, 然后才和const配
