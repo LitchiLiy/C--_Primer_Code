@@ -4,16 +4,21 @@
         {
             "type": "cppbuild",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "label": "task g++",
             "command": "D:\\mingw64\\bin\\g++.exe",
 =======
             "label": "C/C++: g++.exe 生成活动文件",
+=======
+            "label": "task g++",
+>>>>>>> f21f0d0 (合理调整了一下.vscode文件, 将exe整合, 将inc整合,)
             "command": "C:\\mingw64\\bin\\g++.exe",
 >>>>>>> 25d7fbe (第一次在工位上运行成功C++文件, 这个.vscode文件夹是可行的)
             "args": [
                 "-g",
                 "${file}",
                 "-o",
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "${fileDirname}\\build\\${fileBasenameNoExtension}.exe",
                 "-I",
@@ -26,6 +31,14 @@
             ],
             "options": {
                 "cwd": "D:\\mingw64\\bin"
+=======
+                "${fileDirname}\\build\\${fileBasenameNoExtension}.exe",
+                "-I",
+                "-std=c++17"
+            ],
+            "options": {
+                "cwd": "C:\\mingw64\\bin"
+>>>>>>> f21f0d0 (合理调整了一下.vscode文件, 将exe整合, 将inc整合,)
             },
             "problemMatcher": [
                 "$gcc"

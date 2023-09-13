@@ -11,7 +11,11 @@
                 "_UNICODE"
             ],
             "windowsSdkVersion": "10.0.17763.0",
+<<<<<<< HEAD
             "compilerPath": "D:\\mingw64\\bin\\g++.exe",
+=======
+            "compilerPath": "C:\\mingw64\\bin\\g++.exe",
+>>>>>>> f21f0d0 (合理调整了一下.vscode文件, 将exe整合, 将inc整合,)
             "cStandard": "c11",
             "cppStandard": "c++17",
             "intelliSenseMode": "${default}"

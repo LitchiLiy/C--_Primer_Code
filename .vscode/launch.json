@@ -3,6 +3,7 @@
     "configurations": [
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             "name": "g++.exe build and debug active file",
 =======
             "name": "Python: 当前文件",
@@ -15,6 +16,9 @@
         {
             "name": "g++.exe - 生成和调试活动文件",
 >>>>>>> 25d7fbe (第一次在工位上运行成功C++文件, 这个.vscode文件夹是可行的)
+=======
+            "name": "g++.exe build and debug active file",
+>>>>>>> f21f0d0 (合理调整了一下.vscode文件, 将exe整合, 将inc整合,)
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}\\build\\${fileBasenameNoExtension}.exe",
@@ -22,7 +26,7 @@
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
             "miDebuggerPath": "C:\\mingw64\\bin\\gdb.exe",
             "setupCommands": [
