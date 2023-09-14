@@ -1,9 +1,11 @@
 #include <conio.h>
 #include <iostream>
 #include <string>
+#include <windows.h>
 
 int main()
 {
+    SetConsoleOutputCP(CP_UTF8);
     using std::string;
     // string s1;
     // // string s2 = 'a'; // 错误, C++的string不允许将单个a字符赋值于字符串对象, 你可以使用"a"这样来赋值, 只不过多了个空字符号
@@ -74,43 +76,125 @@ int main()
     */
     
     // 3
-    string compare1, compare2;
-    std::cout << "请输入两个字符串:" << std::endl;
-    getline(std::cin, compare1);
-    getline(std::cin, compare2);
-    std::cout << "将输出这两个字符串之间string的比较大小方式" << std::endl;
-    if (compare1 > compare2)
+    // string compare1, compare2;
+    // std::cout << "请输入两个字符串:" << std::endl;
+    // getline(std::cin, compare1);
+    // getline(std::cin, compare2);
+    // std::cout << "将输出这两个字符串之间string的比较大小方式" << std::endl;
+    // if (compare1 > compare2)
+    // {
+    //     std::cout << "较大的那个字符串是: " << compare1 << std::endl;
+    // }
+    // else if (compare1 < compare2)
+    // {
+    //     std::cout << "较大的那个字符串是: " << compare2 << std::endl;
+    // }
+    // else
+    // {
+    //     std::cout << "两个字符串相等, 都为"<< compare1 << std::endl;
+    // }
+    // int size;
+    // size = (compare1.size() < compare2.size());
+    // if (size == 1)
+    // {
+    //     std::cout << "较大的那个字符串是: \n" << compare2 << std::endl;
+    //     std::cout << "他的长度大小为: \n"
+    //               << compare2.size() << std::endl;
+    // }
+    // else if (compare1.size() > compare2.size())
+    // {
+    //     std::cout << "较大的那个字符串是: \n" << compare1 << std::endl;
+    //     std::cout << "他的长度大小为: \n"
+    //               << compare1.size() << std::endl;
+    // }
+    // else
+    // {
+    //     std::cout << "两个字符串相等, 都为" << compare1 << std::endl;
+    //     std::cout << "他们的长度大小为: \n"
+    //               << compare1.size() << std::endl;
+    // }
+
+    // 3.23节的内容
+    // string str("hello world!!!");
+    // for(auto c : str)
+    // {
+    //     std::cout << c << std::endl;
+    // }
+
+    // decltype(str.size()) size_cnt = 0;
+    // for(auto c : str)
+    // {
+    //     if(ispunct(c))
+    //     {
+    //         ++size_cnt;
+    //     }
+    // }
+    // std::cout << "这个字符串的符号数为:"
+    //           << size_cnt
+    //           << " 这串字符串为:"
+    //           << str
+    //           << std::endl;
+
+    // for(auto &c : str)
+    // {
+    //     c = toupper(c);
+    // }
+    // std::cout << str
+    //           << std::endl;
+
+    // string::size_type index = 0;
+    // if(index < str.size())
+    // {
+    //     str[index] = toupper(str[index]);
+    // }
+    // std::cout << str
+    //           << std::endl;
+
+    // 16进制转换器
+    // string x16 = "0123456789ABCDEF";
+    // string::size_type index = 0, num;
+    // string str;
+    // std::cout << "请输入多个十进制数进制数, 每个数之间用空格隔开:"
+    //           << std::endl;
+    // while(std::cin >> num)
+    // {   
+    //     if(num < x16.size())
+    //         str += x16[num];
+    // }
+    // std::cout << "转换的结果为:"
+    //           << str
+    //           << std::endl;
+    
+    // exam3.23
+    // 2 换成char会报错不让你执行. 因为数据结构不一致, 他无法赋值
+    string str("hello world!!!");
+    // for(chat &c : str)
+    // {
+    //     c = "X";
+    // }
+
+    // 3
+    // string str1;
+    // for(auto c : str)
+    // {
+    //     if(!ispunct(c))
+    //     {
+    //         str1 += c;
+    //     }
+    // }
+    // std::cout << "除掉符号的字符串为: "
+    //           << str1
+    //           << std::endl;
+
+    // 4
+    const string str1("hello world!!!");
+    for(auto &c : str1)
     {
-        std::cout << "较大的那个字符串是: " << compare1 << std::endl;
+        std::cout << c << std::endl;
     }
-    else if (compare1 < compare2)
-    {
-        std::cout << "较大的那个字符串是: " << compare2 << std::endl;
-    }
-    else
-    {
-        std::cout << "两个字符串相等, 都为"<< compare1 << std::endl;
-    }
-    int size;
-    size = (compare1.size() < compare2.size());
-    if (size == 1)
-    {
-        std::cout << "较大的那个字符串是: \n" << compare2 << std::endl;
-        std::cout << "他的长度大小为: \n"
-                  << compare2.size() << std::endl;
-    }
-    else if (compare1.size() > compare2.size())
-    {
-        std::cout << "较大的那个字符串是: \n" << compare1 << std::endl;
-        std::cout << "他的长度大小为: \n"
-                  << compare1.size() << std::endl;
-    }
-    else
-    {
-        std::cout << "两个字符串相等, 都为" << compare1 << std::endl;
-        std::cout << "他们的长度大小为: \n"
-                  << compare1.size() << std::endl;
-    }
+    /*
+        这个c是一个const char 字符引用, 故不能修改他的值, 你把鼠标放在上面就能看出他的数据类型, chatgpt他都傻逼来的, 他说是char
+    */
 
     _getch();
     return 0;
