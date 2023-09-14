@@ -2,16 +2,22 @@
 #include <iostream>
 #include <string>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9501e89 (笔记本上学的)
 #include <windows.h>
 
 int main()
 {
     SetConsoleOutputCP(CP_UTF8);
+<<<<<<< HEAD
 =======
 
 int main()
 {
 >>>>>>> f21f0d0 (合理调整了一下.vscode文件, 将exe整合, 将inc整合,)
+=======
+>>>>>>> 9501e89 (笔记本上学的)
     using std::string;
     // string s1;
     // // string s2 = 'a'; // 错误, C++的string不允许将单个a字符赋值于字符串对象, 你可以使用"a"这样来赋值, 只不过多了个空字符号
@@ -83,6 +89,9 @@ int main()
     
     // 3
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9501e89 (笔记本上学的)
     // string compare1, compare2;
     // std::cout << "请输入两个字符串:" << std::endl;
     // getline(std::cin, compare1);
@@ -196,6 +205,7 @@ int main()
     // 4
     const string str1("hello world!!!");
     for(auto &c : str1)
+<<<<<<< HEAD
     {
         std::cout << c << std::endl;
     }
@@ -209,38 +219,18 @@ int main()
     getline(std::cin, compare2);
     std::cout << "将输出这两个字符串之间string的比较大小方式" << std::endl;
     if (compare1 > compare2)
+=======
+>>>>>>> 9501e89 (笔记本上学的)
     {
-        std::cout << "较大的那个字符串是: " << compare1 << std::endl;
+        std::cout << c << std::endl;
     }
-    else if (compare1 < compare2)
-    {
-        std::cout << "较大的那个字符串是: " << compare2 << std::endl;
-    }
-    else
-    {
-        std::cout << "两个字符串相等, 都为"<< compare1 << std::endl;
-    }
-    int size;
-    size = (compare1.size() < compare2.size());
-    if (size == 1)
-    {
-        std::cout << "较大的那个字符串是: \n" << compare2 << std::endl;
-        std::cout << "他的长度大小为: \n"
-                  << compare2.size() << std::endl;
-    }
-    else if (compare1.size() > compare2.size())
-    {
-        std::cout << "较大的那个字符串是: \n" << compare1 << std::endl;
-        std::cout << "他的长度大小为: \n"
-                  << compare1.size() << std::endl;
-    }
-    else
-    {
-        std::cout << "两个字符串相等, 都为" << compare1 << std::endl;
-        std::cout << "他们的长度大小为: \n"
-                  << compare1.size() << std::endl;
-    }
+<<<<<<< HEAD
 >>>>>>> f21f0d0 (合理调整了一下.vscode文件, 将exe整合, 将inc整合,)
+=======
+    /*
+        这个c是一个const char 字符引用, 故不能修改他的值, 你把鼠标放在上面就能看出他的数据类型, chatgpt他都傻逼来的, 他说是char
+    */
+>>>>>>> 9501e89 (笔记本上学的)
 
     _getch();
     return 0;
