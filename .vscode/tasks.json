@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
             "label": "task g++",
+<<<<<<< HEAD
             "command": "D:\\mingw64\\bin\\g++.exe",
 <<<<<<< HEAD
 =======
@@ -17,6 +18,9 @@
 >>>>>>> 25d7fbe (第一次在工位上运行成功C++文件, 这个.vscode文件夹是可行的)
 =======
 >>>>>>> 9501e89 (笔记本上学的)
+=======
+            "command": "C:\\mingw64\\bin\\g++.exe",
+>>>>>>> c734337 (办公室电脑)
             "args": [
                 "-g",
                 "${file}",
@@ -41,11 +45,15 @@
             ],
             "options": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "cwd": "C:\\mingw64\\bin"
 >>>>>>> f21f0d0 (合理调整了一下.vscode文件, 将exe整合, 将inc整合,)
 =======
                 "cwd": "D:\\mingw64\\bin"
 >>>>>>> 9501e89 (笔记本上学的)
+=======
+                "cwd": "C:\\mingw64\\bin"
+>>>>>>> c734337 (办公室电脑)
             },
             "problemMatcher": [
                 "$gcc"
