@@ -3,7 +3,8 @@
 #include <windows.h>
 #include <string>
 #include <vector>
- 
+using std::string;
+using std::vector;
 int main()
 {
     SetConsoleOutputCP(CP_UTF8);
@@ -76,12 +77,52 @@ int main()
         1. 你会发现char类型不读取字表符, 空格, 换行符这种类型的符号. 
     */
     
-    // 2
+    // 2 读取输入语句的所有空格, 换行符, 制表符
     std::string str;
     int yuanyin = 0, fuyin = 0;
     int zhibiaofu = 0;
+    vector<string> str_vec;
+    while(std::getline(std::cin, str))
+    {
+        str_vec.push_back(str);
+    }
+    for(auto s:str_vec)
+    {
+        std::cout << s << std::endl;
+        for(auto ch : s)
+        {
+            std::cout << ch << std::endl;
+            switch(ch)
+            {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                    ++yuanyin;
+                    break;
+                default : 
+                    if(std::isspace(ch))
+                    {
+                        ++zhibiaofu;
+                    }
+                    else
+                        ++fuyin;
+                    break;
+            }
+        }
+    }
+    std::cout << yuanyin << '\n'
+              << fuyin << '\n'
+              << zhibiaofu << std::endl;
+    /*
+        1. 如果是while(cin >> str)的话, 这个str将不会读取you are a man.中的所有空格, 而是一个个单词来读, you一个, are一个
+        2. 然后就会发现vector里面没有一个空格, 空间被用来存储单词了. 
+        3. 所以想要得到空格, 或者想vector存储一句带空格的话, 就要用getline来读取到str中.
+    */
     
-
+    // 3 检测ff只要先判断有没有f, 再用switch就行
+    
     _getch();
     return 0;
 }
