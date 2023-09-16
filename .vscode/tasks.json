@@ -7,6 +7,7 @@
 <<<<<<< HEAD
             "label": "task g++",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "command": "D:\\mingw64\\bin\\g++.exe",
 <<<<<<< HEAD
 =======
@@ -21,6 +22,9 @@
 =======
             "command": "C:\\mingw64\\bin\\g++.exe",
 >>>>>>> c734337 (办公室电脑)
+=======
+            "command": "D:\\mingw64\\bin\\g++.exe",
+>>>>>>> 9554840 (On branch computer1)
             "args": [
                 "-g",
                 "${file}",
@@ -46,6 +50,7 @@
             "options": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "cwd": "C:\\mingw64\\bin"
 >>>>>>> f21f0d0 (合理调整了一下.vscode文件, 将exe整合, 将inc整合,)
 =======
@@ -54,6 +59,9 @@
 =======
                 "cwd": "C:\\mingw64\\bin"
 >>>>>>> c734337 (办公室电脑)
+=======
+                "cwd": "D:\\mingw64\\bin"
+>>>>>>> 9554840 (On branch computer1)
             },
             "problemMatcher": [
                 "$gcc"
