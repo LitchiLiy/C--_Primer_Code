@@ -15,7 +15,7 @@ int main(){
     // 1.4
     std::cout << "Please enter two number:"
               << std::endl;
-    int v1 = 0, v2 = 0;
+
     std::cin >> v1 >> v2;
     std::cout << "the 乘法 is :" << v1 * v2 << std::endl;
 
