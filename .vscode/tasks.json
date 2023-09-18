@@ -11,6 +11,7 @@
                 "-o",
                 "${fileDirname}\\build\\${fileBasenameNoExtension}.exe",
                 "-I",
+                "${workspaceFolder}",
                 "-std=c++17"
             ],
             "options": {
