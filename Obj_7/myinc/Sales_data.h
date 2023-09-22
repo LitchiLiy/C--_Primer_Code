@@ -12,27 +12,31 @@ std::istream &read(std::istream &cins, Sales_data &items);
 
 struct Sales_data
 {
-    // 构造函数
-    Sales_data() = default;
-    Sales_data(const string &s) : bookNo(s){};
-    Sales_data(const string &s, unsigned u, double p) : bookNo(s), units_sold(u), revenue(p * u){};
-    Sales_data(std::istream &str)
-    {
-        read(str, *this);
-    }
+    friend std::ostream &print(std::ostream &couts,const Sales_data &items);
+    friend std::istream &read(std::istream &cins, Sales_data &items);
+    public:
+        // 构造函数
+        Sales_data() = default;
+        Sales_data(const string &s) : bookNo(s){};
+        Sales_data(const string &s, unsigned u, double p) : bookNo(s), units_sold(u), revenue(p * u){};
+        Sales_data(std::istream &str)
+        {
+            read(str, *this);
+        }
+        string isbn() const
+        {
+            return bookNo;
+        }
+        Sales_data &combine(const Sales_data &items);
 
-    string bookNo;
-    unsigned units_sold = 0;
-    double revenue = 0.0;
 
-    string isbn() const
-    {
-        return bookNo;
-    }
-    Sales_data &combine(const Sales_data &items);
-    
-    double avg_price() const;
+    private:
+        string bookNo;
+        unsigned units_sold = 0;
+        double revenue = 0.0;
+        double avg_price() const;
 };
+
 
 
 
@@ -77,9 +81,5 @@ Sales_data &Sales_data::combine(const Sales_data &items)
     revenue += items.revenue;
     return *this;
 }
-
-
-
-
 
 #endif
