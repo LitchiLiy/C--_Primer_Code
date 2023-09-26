@@ -88,6 +88,26 @@ int main()
     //     cout << n << " ";
     // }
 
-        _getch();
+    // 932
+    /*
+        1. array, vector, deque, string都是可以随机访问的容器类型
+        2. back和front函数返回的是引用, 而不是赋值, 可以直接被赋值
+        3. 养成在随机访问时保证数组不为空, 或者访问对象不超出范围的好习惯.
+        4. at返回一个引用, 左值也应该被设计为一个引用
+    */
+    vector<int> num1{1, 2, 3, 4, 5, 6, 7, 8, 9};
+    if(!num1.empty())
+    {
+        cout << num1.back() << ++num1.front() << endl; // 返回 9 2
+        num1.back() = 90;
+        num1.front() = 10;
+        cout <<  num1.back() << ++num1.front() << endl; // 返回 90 11
+        cout << num1[1];
+        int &yy = num1.at(0);
+        cout << --yy << endl;
+    }
+
+
+    _getch();
     return 0;
 }
