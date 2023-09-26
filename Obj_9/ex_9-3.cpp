@@ -95,18 +95,34 @@ int main()
         3. 养成在随机访问时保证数组不为空, 或者访问对象不超出范围的好习惯.
         4. at返回一个引用, 左值也应该被设计为一个引用
     */
-    vector<int> num1{1, 2, 3, 4, 5, 6, 7, 8, 9};
-    if(!num1.empty())
+    // vector<int> num1{1, 2, 3, 4, 5, 6, 7, 8, 9};
+    // if(!num1.empty())
+    // {
+    //     cout << num1.back() << ++num1.front() << endl; // 返回 9 2
+    //     num1.back() = 90;
+    //     num1.front() = 10;
+    //     cout <<  num1.back() << ++num1.front() << endl; // 返回 90 11
+    //     cout << num1[1];
+    //     int &yy = num1.at(0);
+    //     cout << --yy << endl;
+    // }
+    /*
+        1. 删除操作要保证容器不为空, 并且删除的迭代器不是end迭代器, 这些操作都会导致未定义行为.
+        2. pop删除后返回void, 而erase返回被删者或最后一个删除的元素对应的下一个位置, 返回它的迭代器.
+        3. 删除操作对容器本就拥有的迭代器会发生影响, 大概路是无效化
+    */
+    vector<int> num1{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    num1.pop_back();
+    num1.erase(num1.begin());
+    for (auto &n: num1)
     {
-        cout << num1.back() << ++num1.front() << endl; // 返回 9 2
-        num1.back() = 90;
-        num1.front() = 10;
-        cout <<  num1.back() << ++num1.front() << endl; // 返回 90 11
-        cout << num1[1];
-        int &yy = num1.at(0);
-        cout << --yy << endl;
+        cout << n << " ";
     }
-
+    num1.erase(num1.begin(), num1.end());
+    for (auto &n: num1)
+    {
+        cout << n << " ";
+    }
 
     _getch();
     return 0;
