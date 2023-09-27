@@ -6,6 +6,7 @@
 #include <deque>
 #include <list>
 using namespace std;
+
 int main()
 {
     SetConsoleOutputCP(CP_UTF8);
@@ -18,26 +19,26 @@ int main()
         5. 关于插入方法: 插入到迭代器所指元素的前面一个位置, 迭代器可以选到end的地方, 正好表示插入到末尾.
     */
     
-    vector<int> v{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    v.push_back(1);
-    v.emplace_back(22);
+    // vector<int> v{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    // v.push_back(1);
+    // v.emplace_back(22);
 
-    deque<string> vv{"hello", "world"};
-    vv.push_back("!");
-    vv.push_front("you");
+    // deque<string> vv{"hello", "world"};
+    // vv.push_back("!");
+    // vv.push_front("you");
 
-    vv.emplace_back("//");
-    vv.emplace_front("++");
+    // vv.emplace_back("//");
+    // vv.emplace_front("++");
 
-    list<string> l1{"hello", "world"};
-    l1.insert(l1.begin(), "you are man?");
-    l1.insert(l1.begin() , "1");
-    l1.insert(++l1.begin(), "2");
-    l1.insert(l1.end(), {"3", "4"});
-    l1.insert(l1.end(), vv.begin(), vv.end());
+    // list<string> l1{"hello", "world"};
+    // l1.insert(l1.begin(), "you are man?");
+    // l1.insert(l1.begin() , "1");
+    // l1.insert(++l1.begin(), "2");
+    // l1.insert(l1.end(), {"3", "4"});
+    // l1.insert(l1.end(), vv.begin(), vv.end());
 
     // 1
-    string str1;
+    // string str1;
     // deque<string> destr;
 
     // while(cin >> str1)
@@ -111,19 +112,65 @@ int main()
         2. pop删除后返回void, 而erase返回被删者或最后一个删除的元素对应的下一个位置, 返回它的迭代器.
         3. 删除操作对容器本就拥有的迭代器会发生影响, 大概路是无效化
     */
-    vector<int> num1{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    num1.pop_back();
-    num1.erase(num1.begin());
-    for (auto &n: num1)
-    {
-        cout << n << " ";
-    }
-    num1.erase(num1.begin(), num1.end());
-    for (auto &n: num1)
-    {
-        cout << n << " ";
-    }
+// vector<int> num1{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+// num1.pop_back();
+// num1.erase(num1.begin());
+// for (auto &n: num1)
+// {
+//     cout << n << " ";
+// }
+// num1.erase(num1.begin(), num1.end());
+// for (auto &n: num1)
+// {
+//     cout << n << " ";
+// }
+    // 调整容器
+// vector<int> i1{1, 2, 3, 4, 5, 6, 7, 8, 9};
+// vector<int> i2{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+// i1.resize(8);
+// i1.resize(20, 2);
+// for(auto &n: i1)
+// {
+//     cout << n << " ";
+// }
+// for(auto &n: i2)
+// {
+//     cout << n << " ";
+// }
+    // 936
+    /*
+        1. list不能用他给的那个程序是因为list的迭代器只能++
+        
+    */
+
+    /*
+        1. 关于容器内存分配, 就是说现在分配容器的容量一般先预分配一些内存给你, 如果不够了才再增加内存, 方式就是将你的元素内容搬到另一个存储空间去(搬家), 
+    */
+// vector<int> num1;
+// cout << num1.size() << " " << num1.capacity() << endl;
+// num1.push_back(1);
+// num1.push_back(2);
+// num1.push_back(3);
+// num1.push_back(4);
+// num1.push_back(5);
+// num1.push_back(6);
+// num1.push_back(7);
+// num1.push_back(8);
+// num1.push_back(9);
+// num1.push_back(10);
+// cout << num1.size() << " " << num1.capacity() << endl;
+// num1.resize(20);
+// cout << num1.size() << " " << num1.capacity() << endl;
+// num1.reserve(100);
+// cout <<  num1.size() << " " << num1.capacity() << endl;
+
+
+    /*
+        1. 容器适配器
+    */
+    
 
     _getch();
-    return 0;
+
+        return 0;
 }
